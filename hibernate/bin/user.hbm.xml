@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+		
+		
+<hibernate-mapping package="com.dao">
+	<class name="User" table="user">
+		<id name="id" type="long" column="id">
+<!--			<generator class="native" />
+ 			<generator class="foreign"> 
+        	<param name="property">person</param> 
+      		</generator>  -->
+		</id>
+		<property name="name" column="name" />
+		<property name="nickname" column="nickname" />
+		<property name="description" column="description" />
+		<property name="level" type="integer" column="level" />
+		<property name="article" type="integer" column="article" />
+		<property name="integration" type="integer" column="integration" />
+		<property name="constellation" column="constellation" />
+		<property name="createTime" type="timestamp" column="create_time"/>
+		<property name="lastLoginTime" type="timestamp" column="last_login_time"/>
+		<property name="status" type="integer" column="status" />
+		
+		<one-to-one name="account" constrained="true" /> 
+	</class>
+
+</hibernate-mapping>

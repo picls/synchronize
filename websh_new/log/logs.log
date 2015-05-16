@@ -1,0 +1,1 @@
+2015-05-14 15:57:06,759 INFO  [com.web.JAccount] (main) com.web.exception.DuplicateDataException: Account with id 0 already existed.

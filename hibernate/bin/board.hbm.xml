@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+
+<hibernate-mapping package="com.dao">
+	<class name="Board" table="board">
+		<id name="id" type="long" column="id">
+			<generator class="native"/>
+		</id>
+		<property name="name" column="name" />
+		<property name="createTime" type="timestamp" column="create_time"/>
+		<property name="lastChangeTime" type="timestamp" column="last_change_time"/>
+		<property name="postNumber" type="integer" column="post_number" />
+		<property name="master" type="long" column="master" />
+		<property name="status" type="integer" column="status" />
+		
+	</class>
+</hibernate-mapping>
